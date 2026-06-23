@@ -1,0 +1,244 @@
+{
+    "actions":  [
+
+                ],
+    "autoname":  "LF-.YYYY.-.#####",
+    "creation":  "2024-01-01 00:00:00.000000",
+    "doctype":  "DocType",
+    "editable_grid":  1,
+    "engine":  "InnoDB",
+    "field_order":  [
+                        "section_fine_reference",
+                        "member",
+                        "member_name",
+                        "book_issue",
+                        "section_book_issue_details",
+                        "book_title",
+                        "issue_date",
+                        "due_date",
+                        "return_date",
+                        "section_fine_calculation",
+                        "overdue_days",
+                        "fine_per_day",
+                        "total_fine_amount",
+                        "section_payment_tracking",
+                        "amount_paid",
+                        "outstanding_amount",
+                        "status",
+                        "section_waiver",
+                        "waiver_amount",
+                        "waiver_reason",
+                        "waived_by",
+                        "waiver_date",
+                        "section_accounting_reference",
+                        "journal_entry"
+                    ],
+    "fields":  [
+                   {
+                       "fieldname":  "section_fine_reference",
+                       "fieldtype":  "Section Break",
+                       "label":  "Fine Reference"
+                   },
+                   {
+                       "fieldname":  "member",
+                       "fieldtype":  "Link",
+                       "in_list_view":  1,
+                       "label":  "Member",
+                       "options":  "Library Member",
+                       "reqd":  1
+                   },
+                   {
+                       "fetch_from":  "member.full_name",
+                       "fieldname":  "member_name",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "Member Name",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "book_issue",
+                       "fieldtype":  "Link",
+                       "label":  "Book Issue",
+                       "options":  "Library Book Issue",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "section_book_issue_details",
+                       "fieldtype":  "Section Break",
+                       "label":  "Book \u0026 Issue Details"
+                   },
+                   {
+                       "fetch_from":  "book_issue.book_title",
+                       "fieldname":  "book_title",
+                       "fieldtype":  "Data",
+                       "label":  "Book Title",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "book_issue.issue_date",
+                       "fieldname":  "issue_date",
+                       "fieldtype":  "Date",
+                       "label":  "Issue Date",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "book_issue.due_date",
+                       "fieldname":  "due_date",
+                       "fieldtype":  "Date",
+                       "label":  "Due Date",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "book_issue.return_date",
+                       "fieldname":  "return_date",
+                       "fieldtype":  "Date",
+                       "label":  "Return Date",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "section_fine_calculation",
+                       "fieldtype":  "Section Break",
+                       "label":  "Fine Calculation"
+                   },
+                   {
+                       "fieldname":  "overdue_days",
+                       "fieldtype":  "Int",
+                       "label":  "Overdue Days",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "fine_per_day",
+                       "fieldtype":  "Currency",
+                       "label":  "Fine Per Day",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "total_fine_amount",
+                       "fieldtype":  "Currency",
+                       "in_list_view":  1,
+                       "label":  "Total Fine Amount",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "section_payment_tracking",
+                       "fieldtype":  "Section Break",
+                       "label":  "Payment Tracking"
+                   },
+                   {
+                       "default":  "0",
+                       "fieldname":  "amount_paid",
+                       "fieldtype":  "Currency",
+                       "in_list_view":  1,
+                       "label":  "Amount Paid",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "outstanding_amount",
+                       "fieldtype":  "Currency",
+                       "in_list_view":  1,
+                       "label":  "Outstanding Amount",
+                       "read_only":  1
+                   },
+                   {
+                       "default":  "Unpaid",
+                       "fieldname":  "status",
+                       "fieldtype":  "Select",
+                       "in_list_view":  1,
+                       "label":  "Status",
+                       "options":  "Unpaid\nPartially Paid\nPaid\nWaived",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "section_waiver",
+                       "fieldtype":  "Section Break",
+                       "label":  "Waiver"
+                   },
+                   {
+                       "fieldname":  "waiver_amount",
+                       "fieldtype":  "Currency",
+                       "label":  "Waiver Amount"
+                   },
+                   {
+                       "fieldname":  "waiver_reason",
+                       "fieldtype":  "Text",
+                       "label":  "Waiver Reason"
+                   },
+                   {
+                       "fieldname":  "waived_by",
+                       "fieldtype":  "Link",
+                       "label":  "Waived By",
+                       "options":  "User"
+                   },
+                   {
+                       "fieldname":  "waiver_date",
+                       "fieldtype":  "Date",
+                       "label":  "Waiver Date"
+                   },
+                   {
+                       "fieldname":  "section_accounting_reference",
+                       "fieldtype":  "Section Break",
+                       "label":  "Accounting Reference"
+                   },
+                   {
+                       "description":  "Auto-created accounting entry",
+                       "fieldname":  "journal_entry",
+                       "fieldtype":  "Link",
+                       "label":  "Journal Entry",
+                       "options":  "Journal Entry",
+                       "read_only":  1
+                   }
+               ],
+    "is_submittable":  1,
+    "links":  [
+
+              ],
+    "modified":  "2024-01-01 00:00:00.000000",
+    "modified_by":  "Administrator",
+    "module":  "Library Management",
+    "name":  "Library Fine",
+    "naming_rule":  "Expression (old style)",
+    "owner":  "Administrator",
+    "permissions":  [
+                        {
+                            "role":  "Library Administrator",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "delete":  1,
+                            "submit":  1,
+                            "cancel":  1,
+                            "amend":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Staff",
+                            "read":  1
+                        },
+                        {
+                            "role":  "Library Accounts Staff",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "submit":  1,
+                            "cancel":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Management",
+                            "read":  1
+                        }
+                    ],
+    "search_fields":  "member,member_name,book_title,status",
+    "sort_field":  "modified",
+    "sort_order":  "DESC",
+    "title_field":  "member_name",
+    "track_changes":  1
+}

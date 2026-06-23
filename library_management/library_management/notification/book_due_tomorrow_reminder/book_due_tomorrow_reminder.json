@@ -1,0 +1,28 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.status == \"Issued\"",
+ "creation": "2024-01-01 00:00:00.000000",
+ "date_changed": "due_date",
+ "days_in_advance": 1,
+ "doctype": "Notification",
+ "document_type": "Library Book Issue",
+ "enabled": 1,
+ "event": "Days Before",
+ "is_standard": 1,
+ "message": "Dear {{ doc.member_name }},\n\nYour borrowed book is due for return tomorrow.\n\nBook      : {{ doc.book_title }}\nIssue Date: {{ doc.issue_date }}\nDue Date  : {{ doc.due_date }}\n\nPlease return the book on time to avoid overdue fines.\n\nRegards,\nLibrary Management\nKlaimify Pvt. Ltd.",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Book Due Tomorrow Reminder",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "member",
+   "cc": ""
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Book Return Due Tomorrow - {{ doc.book_title }}"
+}

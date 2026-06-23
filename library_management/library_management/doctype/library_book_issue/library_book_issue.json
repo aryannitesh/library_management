@@ -1,0 +1,237 @@
+{
+    "actions":  [
+
+                ],
+    "autoname":  "LI-.YYYY.-.#####",
+    "creation":  "2024-01-01 00:00:00.000000",
+    "doctype":  "DocType",
+    "editable_grid":  1,
+    "engine":  "InnoDB",
+    "field_order":  [
+                        "section_member_info",
+                        "member",
+                        "member_name",
+                        "member_type",
+                        "membership_status",
+                        "section_book_info",
+                        "book",
+                        "book_title",
+                        "isbn",
+                        "available_copies",
+                        "section_issue_details",
+                        "issue_date",
+                        "loan_period_days",
+                        "due_date",
+                        "section_return_details",
+                        "return_date",
+                        "status",
+                        "remarks",
+                        "section_fine_summary",
+                        "fine_amount",
+                        "fine_paid",
+                        "fine_outstanding"
+                    ],
+    "fields":  [
+                   {
+                       "fieldname":  "section_member_info",
+                       "fieldtype":  "Section Break",
+                       "label":  "Member Info"
+                   },
+                   {
+                       "fieldname":  "member",
+                       "fieldtype":  "Link",
+                       "in_list_view":  1,
+                       "label":  "Member",
+                       "options":  "Library Member",
+                       "reqd":  1
+                   },
+                   {
+                       "fetch_from":  "member.full_name",
+                       "fieldname":  "member_name",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "Member Name",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "member.member_type",
+                       "fieldname":  "member_type",
+                       "fieldtype":  "Link",
+                       "label":  "Member Type",
+                       "options":  "Library Member Type",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "member.membership_status",
+                       "fieldname":  "membership_status",
+                       "fieldtype":  "Data",
+                       "label":  "Membership Status",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "section_book_info",
+                       "fieldtype":  "Section Break",
+                       "label":  "Book Info"
+                   },
+                   {
+                       "fieldname":  "book",
+                       "fieldtype":  "Link",
+                       "in_list_view":  1,
+                       "label":  "Book",
+                       "options":  "Book",
+                       "reqd":  1
+                   },
+                   {
+                       "fetch_from":  "book.title",
+                       "fieldname":  "book_title",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "Book Title",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "book.isbn",
+                       "fieldname":  "isbn",
+                       "fieldtype":  "Data",
+                       "label":  "ISBN",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "book.available_copies",
+                       "fieldname":  "available_copies",
+                       "fieldtype":  "Int",
+                       "label":  "Available Copies",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "section_issue_details",
+                       "fieldtype":  "Section Break",
+                       "label":  "Issue Details"
+                   },
+                   {
+                       "default":  "Today",
+                       "fieldname":  "issue_date",
+                       "fieldtype":  "Date",
+                       "in_list_view":  1,
+                       "label":  "Issue Date",
+                       "reqd":  1
+                   },
+                   {
+                       "description":  "Fetched from Member Type",
+                       "fetch_from":  "member_type.loan_period_days",
+                       "fieldname":  "loan_period_days",
+                       "fieldtype":  "Int",
+                       "label":  "Loan Period (Days)",
+                       "read_only":  1
+                   },
+                   {
+                       "description":  "Auto-set: issue_date + loan_period_days",
+                       "fieldname":  "due_date",
+                       "fieldtype":  "Date",
+                       "in_list_view":  1,
+                       "label":  "Due Date",
+                       "read_only":  1,
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "section_return_details",
+                       "fieldtype":  "Section Break",
+                       "label":  "Return Details"
+                   },
+                   {
+                       "fieldname":  "return_date",
+                       "fieldtype":  "Date",
+                       "in_list_view":  1,
+                       "label":  "Return Date"
+                   },
+                   {
+                       "default":  "Issued",
+                       "fieldname":  "status",
+                       "fieldtype":  "Select",
+                       "in_list_view":  1,
+                       "label":  "Status",
+                       "options":  "Issued\nReturned\nOverdue",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "remarks",
+                       "fieldtype":  "Small Text",
+                       "label":  "Remarks"
+                   },
+                   {
+                       "fieldname":  "section_fine_summary",
+                       "fieldtype":  "Section Break",
+                       "label":  "Fine Summary"
+                   },
+                   {
+                       "fieldname":  "fine_amount",
+                       "fieldtype":  "Currency",
+                       "label":  "Fine Amount",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "fine_paid",
+                       "fieldtype":  "Currency",
+                       "label":  "Fine Paid",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "fine_outstanding",
+                       "fieldtype":  "Currency",
+                       "label":  "Fine Outstanding",
+                       "read_only":  1
+                   }
+               ],
+    "is_submittable":  1,
+    "links":  [
+
+              ],
+    "modified":  "2024-01-01 00:00:00.000000",
+    "modified_by":  "Administrator",
+    "module":  "Library Management",
+    "name":  "Library Book Issue",
+    "naming_rule":  "Expression (old style)",
+    "owner":  "Administrator",
+    "permissions":  [
+                        {
+                            "role":  "Library Administrator",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "delete":  1,
+                            "submit":  1,
+                            "cancel":  1,
+                            "amend":  0,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Staff",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "submit":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Accounts Staff",
+                            "read":  1
+                        },
+                        {
+                            "role":  "Library Management",
+                            "read":  1
+                        }
+                    ],
+    "search_fields":  "member,member_name,book,book_title,status",
+    "sort_field":  "modified",
+    "sort_order":  "DESC",
+    "title_field":  "member_name",
+    "track_changes":  1
+}

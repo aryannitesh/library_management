@@ -1,0 +1,24 @@
+{
+ "cards": [
+  {"card": "Total Books"},
+  {"card": "Books Issued Today"},
+  {"card": "Overdue Books"},
+  {"card": "Active Members"},
+  {"card": "Outstanding Fines"},
+  {"card": "Fine Collected This Month"}
+ ],
+ "charts": [
+  {"chart": "Books Issued Per Month",    "width": "Full"},
+  {"chart": "Member Type Distribution",  "width": "Half"},
+  {"chart": "Fine Collection Trend",     "width": "Half"}
+ ],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Dashboard",
+ "is_default": 0,
+ "is_standard": 1,
+ "module": "Library Management",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Library Dashboard",
+ "owner": "Administrator"
+}

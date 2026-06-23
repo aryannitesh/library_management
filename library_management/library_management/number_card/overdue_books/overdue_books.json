@@ -1,0 +1,17 @@
+{
+ "color": "#e74c3c",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Number Card",
+ "document_type": "Library Book Issue",
+ "filters_json": "[{\"fieldname\":\"status\",\"operator\":\"=\",\"value\":\"Overdue\"}]",
+ "function": "Count",
+ "is_public": 1,
+ "label": "Overdue Books",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Overdue Books",
+ "owner": "Administrator",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Monthly"
+}

@@ -1,0 +1,170 @@
+{
+    "actions":  [
+
+                ],
+    "autoname":  "field:isbn",
+    "creation":  "2024-01-01 00:00:00.000000",
+    "doctype":  "DocType",
+    "editable_grid":  1,
+    "engine":  "InnoDB",
+    "field_order":  [
+                        "title",
+                        "author",
+                        "isbn",
+                        "category",
+                        "rack_location",
+                        "publisher",
+                        "publication_year",
+                        "book_cover",
+                        "section_copy_tracking",
+                        "total_copies",
+                        "available_copies",
+                        "section_status",
+                        "status",
+                        "availability_status",
+                        "description"
+                    ],
+    "fields":  [
+                   {
+                       "fieldname":  "title",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "Title",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "author",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "Author",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "isbn",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "ISBN",
+                       "unique":  1
+                   },
+                   {
+                       "fieldname":  "category",
+                       "fieldtype":  "Link",
+                       "in_list_view":  1,
+                       "label":  "Category",
+                       "options":  "Book Category",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "rack_location",
+                       "fieldtype":  "Link",
+                       "label":  "Rack Location",
+                       "options":  "Book Rack"
+                   },
+                   {
+                       "fieldname":  "publisher",
+                       "fieldtype":  "Data",
+                       "label":  "Publisher"
+                   },
+                   {
+                       "fieldname":  "publication_year",
+                       "fieldtype":  "Int",
+                       "label":  "Publication Year"
+                   },
+                   {
+                       "fieldname":  "book_cover",
+                       "fieldtype":  "Attach Image",
+                       "label":  "Book Cover"
+                   },
+                   {
+                       "fieldname":  "section_copy_tracking",
+                       "fieldtype":  "Section Break",
+                       "label":  "Copy Tracking"
+                   },
+                   {
+                       "default":  "1",
+                       "fieldname":  "total_copies",
+                       "fieldtype":  "Int",
+                       "label":  "Total Copies",
+                       "reqd":  1
+                   },
+                   {
+                       "description":  "Auto-updated on issue and return",
+                       "fieldname":  "available_copies",
+                       "fieldtype":  "Int",
+                       "in_list_view":  1,
+                       "label":  "Available Copies",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "section_status",
+                       "fieldtype":  "Section Break",
+                       "label":  "Status"
+                   },
+                   {
+                       "default":  "Active",
+                       "fieldname":  "status",
+                       "fieldtype":  "Select",
+                       "in_list_view":  1,
+                       "label":  "Status",
+                       "options":  "Active\nDiscontinued"
+                   },
+                   {
+                       "fieldname":  "availability_status",
+                       "fieldtype":  "Select",
+                       "in_list_view":  1,
+                       "label":  "Availability Status",
+                       "options":  "Available\nNot Available\nPartially Available",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "description",
+                       "fieldtype":  "Text Editor",
+                       "label":  "Description"
+                   }
+               ],
+    "links":  [
+
+              ],
+    "modified":  "2024-01-01 00:00:00.000000",
+    "modified_by":  "Administrator",
+    "module":  "Library Management",
+    "name":  "Book",
+    "naming_rule":  "By fieldname",
+    "owner":  "Administrator",
+    "permissions":  [
+                        {
+                            "role":  "Library Administrator",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "delete":  1,
+                            "submit":  0,
+                            "cancel":  0,
+                            "amend":  0,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Staff",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Management",
+                            "read":  1
+                        }
+                    ],
+    "search_fields":  "title,author,isbn,category",
+    "sort_field":  "modified",
+    "sort_order":  "DESC",
+    "track_changes":  1
+}

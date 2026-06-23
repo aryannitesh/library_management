@@ -1,0 +1,155 @@
+{
+    "actions":  [
+
+                ],
+    "creation":  "2024-01-01 00:00:00.000000",
+    "doctype":  "DocType",
+    "editable_grid":  1,
+    "engine":  "InnoDB",
+    "field_order":  [
+                        "section_company",
+                        "company",
+                        "section_accounting_accounts",
+                        "fine_income_account",
+                        "member_receivable_account",
+                        "cash_account",
+                        "bank_account",
+                        "upi_account",
+                        "section_default_fine_settings",
+                        "default_loan_period_days",
+                        "default_fine_per_day",
+                        "section_email_notification_settings",
+                        "send_overdue_emails",
+                        "email_reminder_days_before"
+                    ],
+    "fields":  [
+                   {
+                       "fieldname":  "section_company",
+                       "fieldtype":  "Section Break",
+                       "label":  "Company"
+                   },
+                   {
+                       "fieldname":  "company",
+                       "fieldtype":  "Link",
+                       "label":  "Company",
+                       "options":  "Company",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "section_accounting_accounts",
+                       "fieldtype":  "Section Break",
+                       "label":  "Accounting Accounts"
+                   },
+                   {
+                       "description":  "Credit account when fine is raised. e.g. Library Fine Income under Direct Income",
+                       "fieldname":  "fine_income_account",
+                       "fieldtype":  "Link",
+                       "label":  "Fine Income Account",
+                       "options":  "Account",
+                       "reqd":  1
+                   },
+                   {
+                       "description":  "Debit account when fine is raised. e.g. Debtors / Member Receivable",
+                       "fieldname":  "member_receivable_account",
+                       "fieldtype":  "Link",
+                       "label":  "Member Receivable Account",
+                       "options":  "Account",
+                       "reqd":  1
+                   },
+                   {
+                       "description":  "Used when payment mode is Cash",
+                       "fieldname":  "cash_account",
+                       "fieldtype":  "Link",
+                       "label":  "Cash Account",
+                       "options":  "Account"
+                   },
+                   {
+                       "description":  "Used when payment mode is Bank Transfer",
+                       "fieldname":  "bank_account",
+                       "fieldtype":  "Link",
+                       "label":  "Bank Account",
+                       "options":  "Account"
+                   },
+                   {
+                       "description":  "Used when payment mode is UPI",
+                       "fieldname":  "upi_account",
+                       "fieldtype":  "Link",
+                       "label":  "UPI Account",
+                       "options":  "Account"
+                   },
+                   {
+                       "fieldname":  "section_default_fine_settings",
+                       "fieldtype":  "Section Break",
+                       "label":  "Default Fine Settings"
+                   },
+                   {
+                       "default":  "14",
+                       "description":  "Configurable loan period (default 14 days)",
+                       "fieldname":  "default_loan_period_days",
+                       "fieldtype":  "Int",
+                       "label":  "Default Loan Period (Days)"
+                   },
+                   {
+                       "default":  "2",
+                       "fieldname":  "default_fine_per_day",
+                       "fieldtype":  "Currency",
+                       "label":  "Default Fine Per Day"
+                   },
+                   {
+                       "fieldname":  "section_email_notification_settings",
+                       "fieldtype":  "Section Break",
+                       "label":  "Email Notification Settings"
+                   },
+                   {
+                       "default":  "1",
+                       "fieldname":  "send_overdue_emails",
+                       "fieldtype":  "Check",
+                       "label":  "Send Overdue Emails"
+                   },
+                   {
+                       "default":  "1",
+                       "description":  "Send reminder N days before due date",
+                       "fieldname":  "email_reminder_days_before",
+                       "fieldtype":  "Int",
+                       "label":  "Email Reminder Days Before"
+                   }
+               ],
+    "issingle":  1,
+    "links":  [
+
+              ],
+    "modified":  "2024-01-01 00:00:00.000000",
+    "modified_by":  "Administrator",
+    "module":  "Library Management",
+    "name":  "Library Settings",
+    "owner":  "Administrator",
+    "permissions":  [
+                        {
+                            "role":  "Library Administrator",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "delete":  1,
+                            "submit":  0,
+                            "cancel":  0,
+                            "amend":  0,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Accounts Staff",
+                            "read":  1,
+                            "write":  1
+                        },
+                        {
+                            "role":  "Library Management",
+                            "read":  1
+                        }
+                    ],
+    "sort_field":  "modified",
+    "sort_order":  "DESC",
+    "track_changes":  1
+}

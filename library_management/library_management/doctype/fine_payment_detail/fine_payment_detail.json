@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "library_fine",
+  "total_fine",
+  "amount_paid_so_far",
+  "outstanding",
+  "amount_to_pay"
+ ],
+ "fields": [
+  {
+   "fieldname": "library_fine",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Library Fine",
+   "options": "Library Fine",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "library_fine.total_fine_amount",
+   "fieldname": "total_fine",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Fine",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "library_fine.amount_paid",
+   "fieldname": "amount_paid_so_far",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Paid So Far",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "library_fine.outstanding_amount",
+   "fieldname": "outstanding",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Outstanding",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_to_pay",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount to Pay",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Fine Payment Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

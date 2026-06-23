@@ -1,0 +1,134 @@
+{
+    "actions":  [
+
+                ],
+    "autoname":  "LFW-.YYYY.-.#####",
+    "creation":  "2024-01-01 00:00:00.000000",
+    "doctype":  "DocType",
+    "editable_grid":  1,
+    "engine":  "InnoDB",
+    "field_order":  [
+                        "library_fine",
+                        "member",
+                        "member_name",
+                        "total_fine",
+                        "outstanding_amount",
+                        "waiver_amount",
+                        "waiver_reason",
+                        "approved_by",
+                        "waiver_date",
+                        "adjustment_journal_entry"
+                    ],
+    "fields":  [
+                   {
+                       "fieldname":  "library_fine",
+                       "fieldtype":  "Link",
+                       "in_list_view":  1,
+                       "label":  "Library Fine",
+                       "options":  "Library Fine",
+                       "reqd":  1
+                   },
+                   {
+                       "fetch_from":  "library_fine.member",
+                       "fieldname":  "member",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "Member",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "library_fine.member_name",
+                       "fieldname":  "member_name",
+                       "fieldtype":  "Data",
+                       "label":  "Member Name",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "library_fine.total_fine_amount",
+                       "fieldname":  "total_fine",
+                       "fieldtype":  "Currency",
+                       "label":  "Total Fine",
+                       "read_only":  1
+                   },
+                   {
+                       "fetch_from":  "library_fine.outstanding_amount",
+                       "fieldname":  "outstanding_amount",
+                       "fieldtype":  "Currency",
+                       "label":  "Outstanding Amount",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "waiver_amount",
+                       "fieldtype":  "Currency",
+                       "label":  "Waiver Amount",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "waiver_reason",
+                       "fieldtype":  "Text",
+                       "label":  "Waiver Reason",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "approved_by",
+                       "fieldtype":  "Link",
+                       "label":  "Approved By",
+                       "options":  "User",
+                       "reqd":  1
+                   },
+                   {
+                       "default":  "Today",
+                       "fieldname":  "waiver_date",
+                       "fieldtype":  "Date",
+                       "label":  "Waiver Date",
+                       "reqd":  1
+                   },
+                   {
+                       "description":  "Auto-created adjustment Journal Entry",
+                       "fieldname":  "adjustment_journal_entry",
+                       "fieldtype":  "Link",
+                       "label":  "Adjustment Journal Entry",
+                       "options":  "Journal Entry",
+                       "read_only":  1
+                   }
+               ],
+    "is_submittable":  1,
+    "links":  [
+
+              ],
+    "modified":  "2024-01-01 00:00:00.000000",
+    "modified_by":  "Administrator",
+    "module":  "Library Management",
+    "name":  "Library Fine Waiver",
+    "naming_rule":  "Expression (old style)",
+    "owner":  "Administrator",
+    "permissions":  [
+                        {
+                            "role":  "Library Administrator",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "delete":  1,
+                            "submit":  1,
+                            "cancel":  1,
+                            "amend":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Accounts Staff",
+                            "read":  1
+                        },
+                        {
+                            "role":  "Library Management",
+                            "read":  1
+                        }
+                    ],
+    "search_fields":  "library_fine,member,member_name",
+    "sort_field":  "modified",
+    "sort_order":  "DESC",
+    "track_changes":  1
+}

@@ -1,0 +1,18 @@
+{
+ "color": "#27ae60",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Number Card",
+ "document_type": "Library Fine Payment",
+ "aggregate_function_based_on": "total_amount_paid",
+ "filters_json": "[{\"fieldname\":\"payment_date\",\"operator\":\"Timespan\",\"value\":\"this month\"},{\"fieldname\":\"docstatus\",\"operator\":\"=\",\"value\":\"1\"}]",
+ "function": "Sum",
+ "is_public": 1,
+ "label": "Fine Collected This Month",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Fine Collected This Month",
+ "owner": "Administrator",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly"
+}

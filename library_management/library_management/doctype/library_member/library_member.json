@@ -1,0 +1,198 @@
+{
+    "actions":  [
+
+                ],
+    "autoname":  "LM-.YYYY.-.#####",
+    "creation":  "2024-01-01 00:00:00.000000",
+    "doctype":  "DocType",
+    "editable_grid":  1,
+    "engine":  "InnoDB",
+    "field_order":  [
+                        "section_member_details",
+                        "full_name",
+                        "member_type",
+                        "email",
+                        "phone",
+                        "address",
+                        "section_id_proof",
+                        "id_proof_type",
+                        "id_proof_number",
+                        "section_membership_validity",
+                        "membership_start_date",
+                        "membership_end_date",
+                        "membership_status",
+                        "section_financial_summary",
+                        "outstanding_fines",
+                        "section_photo",
+                        "photo",
+                        "section_issue_history",
+                        "issue_history"
+                    ],
+    "fields":  [
+                   {
+                       "fieldname":  "section_member_details",
+                       "fieldtype":  "Section Break",
+                       "label":  "Member Details"
+                   },
+                   {
+                       "fieldname":  "full_name",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "Full Name",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "member_type",
+                       "fieldtype":  "Link",
+                       "in_list_view":  1,
+                       "label":  "Member Type",
+                       "options":  "Library Member Type",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "email",
+                       "fieldtype":  "Data",
+                       "label":  "Email",
+                       "options":  "Email"
+                   },
+                   {
+                       "fieldname":  "phone",
+                       "fieldtype":  "Data",
+                       "label":  "Phone"
+                   },
+                   {
+                       "fieldname":  "address",
+                       "fieldtype":  "Small Text",
+                       "label":  "Address"
+                   },
+                   {
+                       "fieldname":  "section_id_proof",
+                       "fieldtype":  "Section Break",
+                       "label":  "ID Proof"
+                   },
+                   {
+                       "fieldname":  "id_proof_type",
+                       "fieldtype":  "Select",
+                       "label":  "ID Proof Type",
+                       "options":  "\nAadhar Card\nPAN Card\nPassport\nStudent ID Card\nStaff ID Card\nVoter ID\nDriving License"
+                   },
+                   {
+                       "fieldname":  "id_proof_number",
+                       "fieldtype":  "Data",
+                       "label":  "ID Proof Number"
+                   },
+                   {
+                       "fieldname":  "section_membership_validity",
+                       "fieldtype":  "Section Break",
+                       "label":  "Membership Validity"
+                   },
+                   {
+                       "fieldname":  "membership_start_date",
+                       "fieldtype":  "Date",
+                       "label":  "Membership Start Date",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "membership_end_date",
+                       "fieldtype":  "Date",
+                       "label":  "Membership End Date",
+                       "reqd":  1
+                   },
+                   {
+                       "default":  "Active",
+                       "description":  "Auto-updated based on end date",
+                       "fieldname":  "membership_status",
+                       "fieldtype":  "Select",
+                       "in_list_view":  1,
+                       "label":  "Membership Status",
+                       "options":  "Active\nExpired\nSuspended",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "section_financial_summary",
+                       "fieldtype":  "Section Break",
+                       "label":  "Financial Summary"
+                   },
+                   {
+                       "description":  "Auto-calculated from all unpaid Library Fine records",
+                       "fieldname":  "outstanding_fines",
+                       "fieldtype":  "Currency",
+                       "in_list_view":  1,
+                       "label":  "Outstanding Fines",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "section_photo",
+                       "fieldtype":  "Section Break",
+                       "label":  "Photo"
+                   },
+                   {
+                       "fieldname":  "photo",
+                       "fieldtype":  "Attach Image",
+                       "label":  "Photo"
+                   },
+                   {
+                       "fieldname":  "section_issue_history",
+                       "fieldtype":  "Section Break",
+                       "label":  "Issue History"
+                   },
+                   {
+                       "description":  "Complete history of books issued to this member",
+                       "fieldname":  "issue_history",
+                       "fieldtype":  "Table",
+                       "label":  "Issue History",
+                       "options":  "Member Issue History",
+                       "read_only":  1
+                   }
+               ],
+    "links":  [
+
+              ],
+    "modified":  "2024-01-01 00:00:00.000000",
+    "modified_by":  "Administrator",
+    "module":  "Library Management",
+    "name":  "Library Member",
+    "naming_rule":  "Expression (old style)",
+    "owner":  "Administrator",
+    "permissions":  [
+                        {
+                            "role":  "Library Administrator",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "delete":  1,
+                            "submit":  0,
+                            "cancel":  0,
+                            "amend":  0,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Staff",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Accounts Staff",
+                            "read":  1
+                        },
+                        {
+                            "role":  "Library Management",
+                            "read":  1
+                        }
+                    ],
+    "search_fields":  "full_name,member_type,email,phone",
+    "sort_field":  "modified",
+    "sort_order":  "DESC",
+    "title_field":  "full_name",
+    "track_changes":  1
+}

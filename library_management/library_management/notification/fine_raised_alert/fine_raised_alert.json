@@ -1,0 +1,26 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.total_fine_amount > 0",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Notification",
+ "document_type": "Library Fine",
+ "enabled": 1,
+ "event": "New",
+ "is_standard": 1,
+ "message": "Dear {{ doc.member_name }},\n\nA library fine has been raised against your account for the following:\n\nBook        : {{ doc.book_title }}\nIssue Date  : {{ doc.issue_date }}\nDue Date    : {{ doc.due_date }}\nReturn Date : {{ doc.return_date }}\nOverdue Days: {{ doc.overdue_days }}\nFine Rate   : Rs. {{ doc.fine_per_day }} per day\nTotal Fine  : Rs. {{ doc.total_fine_amount }}\n\nPlease visit the library to clear the outstanding amount.\n\nRegards,\nLibrary Management\nKlaimify Pvt. Ltd.",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Fine Raised Alert",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "member",
+   "cc": ""
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Library Fine Notice - Rs. {{ doc.total_fine_amount }}"
+}

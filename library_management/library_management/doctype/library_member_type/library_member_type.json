@@ -1,0 +1,90 @@
+{
+    "actions":  [
+
+                ],
+    "autoname":  "field:member_type_name",
+    "creation":  "2024-01-01 00:00:00.000000",
+    "doctype":  "DocType",
+    "editable_grid":  1,
+    "engine":  "InnoDB",
+    "field_order":  [
+                        "member_type_name",
+                        "loan_period_days",
+                        "max_books_allowed",
+                        "fine_per_day",
+                        "description"
+                    ],
+    "fields":  [
+                   {
+                       "fieldname":  "member_type_name",
+                       "fieldtype":  "Data",
+                       "in_list_view":  1,
+                       "label":  "Member Type Name",
+                       "reqd":  1
+                   },
+                   {
+                       "default":  "14",
+                       "description":  "Configurable loan period per type",
+                       "fieldname":  "loan_period_days",
+                       "fieldtype":  "Int",
+                       "label":  "Loan Period (Days)",
+                       "reqd":  1
+                   },
+                   {
+                       "default":  "3",
+                       "fieldname":  "max_books_allowed",
+                       "fieldtype":  "Int",
+                       "label":  "Max Books Allowed",
+                       "reqd":  1
+                   },
+                   {
+                       "description":  "Configurable per-day fine rate",
+                       "fieldname":  "fine_per_day",
+                       "fieldtype":  "Currency",
+                       "label":  "Fine Per Day",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "description",
+                       "fieldtype":  "Small Text",
+                       "label":  "Description"
+                   }
+               ],
+    "links":  [
+
+              ],
+    "modified":  "2024-01-01 00:00:00.000000",
+    "modified_by":  "Administrator",
+    "module":  "Library Management",
+    "name":  "Library Member Type",
+    "naming_rule":  "By fieldname",
+    "owner":  "Administrator",
+    "permissions":  [
+                        {
+                            "role":  "Library Administrator",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "delete":  1,
+                            "submit":  0,
+                            "cancel":  0,
+                            "amend":  0,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Staff",
+                            "read":  1
+                        },
+                        {
+                            "role":  "Library Management",
+                            "read":  1
+                        }
+                    ],
+    "sort_field":  "modified",
+    "sort_order":  "DESC",
+    "track_changes":  1
+}

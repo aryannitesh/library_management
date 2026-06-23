@@ -1,0 +1,18 @@
+{
+ "color": "#e67e22",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Number Card",
+ "document_type": "Library Fine",
+ "aggregate_function_based_on": "outstanding_amount",
+ "filters_json": "[{\"fieldname\":\"docstatus\",\"operator\":\"=\",\"value\":\"1\"}]",
+ "function": "Sum",
+ "is_public": 1,
+ "label": "Outstanding Fines",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Outstanding Fines",
+ "owner": "Administrator",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Monthly"
+}

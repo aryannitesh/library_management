@@ -1,0 +1,22 @@
+{
+ "chart_name": "Member Type Distribution",
+ "chart_type": "Group By",
+ "color": "#8e44ad",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Dashboard Chart",
+ "document_type": "Library Member",
+ "filters_json": "[{\"fieldname\":\"membership_status\",\"operator\":\"=\",\"value\":\"Active\"}]",
+ "group_by_based_on": "member_type",
+ "group_by_type": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Member Type Distribution",
+ "module": "Library Management",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Member Type Distribution",
+ "owner": "Administrator",
+ "timeseries": 0,
+ "type": "Donut",
+ "use_report_chart": 0
+}

@@ -1,0 +1,28 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.membership_status == \"Active\"",
+ "creation": "2024-01-01 00:00:00.000000",
+ "date_changed": "membership_end_date",
+ "days_in_advance": 7,
+ "doctype": "Notification",
+ "document_type": "Library Member",
+ "enabled": 1,
+ "event": "Days Before",
+ "is_standard": 1,
+ "message": "Dear {{ doc.full_name }},\n\nYour library membership ({{ doc.name }}) expires on {{ doc.membership_end_date }}.\n\nPlease renew your membership to continue borrowing books.\n\nOutstanding Fines: Rs. {{ doc.outstanding_fines }}\n\nRegards,\nLibrary Management\nKlaimify Pvt. Ltd.",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Membership Expiry Warning",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email",
+   "cc": ""
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Your Library Membership Expires in 7 Days"
+}

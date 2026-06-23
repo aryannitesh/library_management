@@ -1,0 +1,165 @@
+{
+    "actions":  [
+
+                ],
+    "autoname":  "LFP-.YYYY.-.#####",
+    "creation":  "2024-01-01 00:00:00.000000",
+    "doctype":  "DocType",
+    "editable_grid":  1,
+    "engine":  "InnoDB",
+    "field_order":  [
+                        "section_payment_info",
+                        "member",
+                        "member_name",
+                        "payment_date",
+                        "payment_mode",
+                        "reference_number",
+                        "section_fine_payment_details",
+                        "fine_payments",
+                        "section_totals",
+                        "total_amount_paid",
+                        "remarks",
+                        "payment_entry"
+                    ],
+    "fields":  [
+                   {
+                       "fieldname":  "section_payment_info",
+                       "fieldtype":  "Section Break",
+                       "label":  "Payment Info"
+                   },
+                   {
+                       "fieldname":  "member",
+                       "fieldtype":  "Link",
+                       "in_list_view":  1,
+                       "label":  "Member",
+                       "options":  "Library Member",
+                       "reqd":  1
+                   },
+                   {
+                       "fetch_from":  "member.full_name",
+                       "fieldname":  "member_name",
+                       "fieldtype":  "Data",
+                       "label":  "Member Name",
+                       "read_only":  1
+                   },
+                   {
+                       "default":  "Today",
+                       "fieldname":  "payment_date",
+                       "fieldtype":  "Date",
+                       "in_list_view":  1,
+                       "label":  "Payment Date",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "payment_mode",
+                       "fieldtype":  "Select",
+                       "in_list_view":  1,
+                       "label":  "Payment Mode",
+                       "options":  "Cash\nBank Transfer\nUPI\nCheque\nOther",
+                       "reqd":  1
+                   },
+                   {
+                       "description":  "Cheque/UTR/UPI Ref No.",
+                       "fieldname":  "reference_number",
+                       "fieldtype":  "Data",
+                       "label":  "Reference Number"
+                   },
+                   {
+                       "fieldname":  "section_fine_payment_details",
+                       "fieldtype":  "Section Break",
+                       "label":  "Fine Payment Details"
+                   },
+                   {
+                       "fieldname":  "fine_payments",
+                       "fieldtype":  "Table",
+                       "label":  "Fine Payments",
+                       "options":  "Fine Payment Detail"
+                   },
+                   {
+                       "fieldname":  "section_totals",
+                       "fieldtype":  "Section Break",
+                       "label":  "Totals"
+                   },
+                   {
+                       "fieldname":  "total_amount_paid",
+                       "fieldtype":  "Currency",
+                       "in_list_view":  1,
+                       "label":  "Total Amount Paid",
+                       "read_only":  1
+                   },
+                   {
+                       "fieldname":  "remarks",
+                       "fieldtype":  "Small Text",
+                       "label":  "Remarks"
+                   },
+                   {
+                       "description":  "Auto-created Payment Entry",
+                       "fieldname":  "payment_entry",
+                       "fieldtype":  "Link",
+                       "label":  "Payment Entry",
+                       "options":  "Payment Entry",
+                       "read_only":  1
+                   }
+               ],
+    "is_submittable":  1,
+    "links":  [
+
+              ],
+    "modified":  "2024-01-01 00:00:00.000000",
+    "modified_by":  "Administrator",
+    "module":  "Library Management",
+    "name":  "Library Fine Payment",
+    "naming_rule":  "Expression (old style)",
+    "owner":  "Administrator",
+    "permissions":  [
+                        {
+                            "role":  "Library Administrator",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "delete":  1,
+                            "submit":  1,
+                            "cancel":  1,
+                            "amend":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Staff",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "submit":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Accounts Staff",
+                            "read":  1,
+                            "write":  1,
+                            "create":  1,
+                            "submit":  1,
+                            "cancel":  1,
+                            "email":  1,
+                            "export":  1,
+                            "print":  1,
+                            "report":  1,
+                            "share":  1
+                        },
+                        {
+                            "role":  "Library Management",
+                            "read":  1
+                        }
+                    ],
+    "search_fields":  "member,member_name,payment_mode,status",
+    "sort_field":  "modified",
+    "sort_order":  "DESC",
+    "title_field":  "member_name",
+    "track_changes":  1
+}

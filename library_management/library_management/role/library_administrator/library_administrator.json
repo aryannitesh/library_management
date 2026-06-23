@@ -1,0 +1,19 @@
+{
+ "creation": "2024-01-01 00:00:00.000000",
+ "desk_access": 1,
+ "doctype": "Role",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Library Administrator",
+ "owner": "Administrator",
+ "role_name": "Library Administrator",
+ "search_bar": 1,
+ "notifications": 1,
+ "list_sidebar": 1,
+ "bulk_actions": 1,
+ "view_switcher": 1,
+ "form_sidebar": 1,
+ "timeline": 1,
+ "dashboard": 1,
+ "is_custom": 1
+}
