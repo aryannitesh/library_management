@@ -23,12 +23,7 @@
  "module": "Library Management",
  "name": "Library Management",
  "owner": "Administrator",
- "roles": [
-  {"role": "Library Administrator"},
-  {"role": "Library Staff"},
-  {"role": "Library Accounts Staff"},
-  {"role": "Library Management"}
- ],
+ "roles": [],
  "shortcuts": [
   {
    "color": "#1a73e8",
