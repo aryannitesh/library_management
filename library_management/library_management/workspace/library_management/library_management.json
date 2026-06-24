@@ -16,6 +16,7 @@
  "icon": "octicon octicon-book",
  "is_hidden": 0,
  "is_public": 1,
+ "public": 1,
  "is_standard": 1,
  "label": "Library Management",
  "modified": "2024-01-01 00:00:00.000000",
