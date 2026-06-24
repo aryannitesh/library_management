@@ -1,0 +1,17 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "library_management"
+version = "1.0.0"
+description = "Library Management System with Integrated Accounting"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+# frappe is provided by the bench environment, not a pip dependency
+dependencies = []
+
+[tool.bench]
+app_name = "library_management"
