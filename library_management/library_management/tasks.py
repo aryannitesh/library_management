@@ -1,4 +1,4 @@
-# Copyright (c) 2024, Klaimify Pvt. Ltd. and contributors
+﻿# Copyright (c) 2024, Klaimify Pvt. Ltd. and contributors
 # For license information, please see license.txt
 
 import frappe
@@ -132,6 +132,30 @@ Klaimify Pvt. Ltd.
                 "Library Overdue Reminder",
             )
 
+
+
+def update_membership_status():
+    today = nowdate()
+
+    expired = frappe.db.get_all(
+        "Library Member",
+        filters={"status": "Active", "membership_expiry": ["<", today]},
+        fields=["name"],
+    )
+    for m in expired:
+        frappe.db.set_value("Library Member", m["name"], "status", "Inactive")
+
+    reactivated = frappe.db.get_all(
+        "Library Member",
+        filters={"status": "Inactive", "membership_expiry": [">=", today]},
+        fields=["name"],
+    )
+    for m in reactivated:
+        frappe.db.set_value("Library Member", m["name"], "status", "Active")
+
+    frappe.db.commit()
     frappe.logger().info(
-        "send_overdue_reminders: sent {} reminder(s).".format(sent_count)
+        "update_membership_status: expired={}, reactivated={}.".format(
+            len(expired), len(reactivated)
+        )
     )
