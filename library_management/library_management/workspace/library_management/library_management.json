@@ -9,22 +9,180 @@
    "label": "Fine Collection Trend"
   }
  ],
- "color": "#1a73e8",
- "content": "[{\"id\":\"section_book_catalog\",\"type\":\"section\",\"data\":{\"title\":\"Book Catalog\",\"col\":4},\"children\":[{\"id\":\"sc_book\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book\",\"col\":4}},{\"id\":\"sc_book_category\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Category\",\"col\":4}},{\"id\":\"sc_book_rack\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Rack\",\"col\":4}},{\"id\":\"sc_new_book\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Book\",\"col\":4}}]},{\"id\":\"section_members\",\"type\":\"section\",\"data\":{\"title\":\"Members\",\"col\":4},\"children\":[{\"id\":\"sc_library_member\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Member\",\"col\":4}},{\"id\":\"sc_library_member_type\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Member Type\",\"col\":4}},{\"id\":\"sc_new_member\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Library Member\",\"col\":4}}]},{\"id\":\"section_transactions\",\"type\":\"section\",\"data\":{\"title\":\"Transactions\",\"col\":4},\"children\":[{\"id\":\"sc_lbi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Book Issue\",\"col\":4}},{\"id\":\"sc_new_issue\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Library Book Issue\",\"col\":4}},{\"id\":\"sc_overdue\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overdue Books Report\",\"col\":4}}]},{\"id\":\"section_fines\",\"type\":\"section\",\"data\":{\"title\":\"Fines & Accounting\",\"col\":4},\"children\":[{\"id\":\"sc_fine\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Fine\",\"col\":4}},{\"id\":\"sc_fine_payment\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Fine Payment\",\"col\":4}},{\"id\":\"sc_fine_waiver\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Fine Waiver\",\"col\":4}},{\"id\":\"sc_settings\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Settings\",\"col\":4}}]},{\"id\":\"section_reports\",\"type\":\"section\",\"data\":{\"title\":\"Reports\",\"col\":4},\"children\":[{\"id\":\"sc_r1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fine Collection Report\",\"col\":4}},{\"id\":\"sc_r2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overdue Books Report Shortcut\",\"col\":4}},{\"id\":\"sc_r3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Member Activity Report\",\"col\":4}},{\"id\":\"sc_r4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Utilization Report\",\"col\":4}},{\"id\":\"sc_r5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Outstanding Fines Summary\",\"col\":4}},{\"id\":\"sc_dashboard\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Dashboard\",\"col\":4}}]}]",
- "creation": "2024-01-01 00:00:00.000000",
+ "content": "[]",
+ "creation": "2024-01-01 00:00:00",
+ "custom_blocks": [
+  {}
+ ],
+ "docstatus": 0,
  "doctype": "Workspace",
+ "hide_custom": 0,
  "icon": "octicon octicon-book",
+ "idx": 0,
  "is_hidden": 0,
- "is_public": 1,
- "public": 1,
- "is_standard": 1,
  "label": "Library Management",
- "modified": "2024-01-01 00:00:00.000000",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book Catalog",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book",
+   "link_count": 0,
+   "link_to": "Book",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book Category",
+   "link_count": 0,
+   "link_to": "Book Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book Rack",
+   "link_count": 0,
+   "link_to": "Book Rack",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Members",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Member",
+   "link_count": 0,
+   "link_to": "Library Member",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Member Type",
+   "link_count": 0,
+   "link_to": "Library Member Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transactions",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Book Issue",
+   "link_count": 0,
+   "link_to": "Library Book Issue",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fines & Accounting",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Fine",
+   "link_count": 0,
+   "link_to": "Library Fine",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Fine Payment",
+   "link_count": 0,
+   "link_to": "Library Fine Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Fine Waiver",
+   "link_count": 0,
+   "link_to": "Library Fine Waiver",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Settings",
+   "link_count": 0,
+   "link_to": "Library Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-24 12:08:11.435538",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Management",
+ "number_cards": [
+  {
+   "label": "Test",
+   "number_card_name": "Active Members"
+  }
+ ],
  "owner": "Administrator",
- "roles": [],
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Library Administrator"
+  },
+  {
+   "role": "Library Staff"
+  },
+  {
+   "role": "Library Accounts Staff"
+  },
+  {
+   "role": "Library Management"
+  }
+ ],
+ "sequence_id": 0.0,
  "shortcuts": [
   {
    "color": "#1a73e8",
@@ -34,101 +192,38 @@
    "type": "DocType"
   },
   {
-   "label": "Book Category",
-   "link_to": "Book Category",
+   "doc_view": "List",
+   "label": "test",
+   "link_to": "About Us Team Member",
    "type": "DocType"
   },
   {
-   "label": "Book Rack",
-   "link_to": "Book Rack",
-   "type": "DocType"
-  },
-  {
-   "label": "New Book",
-   "link_to": "Book",
-   "type": "DocType",
-   "doc_view": "new"
-  },
-  {
-   "color": "#1a73e8",
+   "color": "#34a853",
    "format": "{} Members",
    "label": "Library Member",
    "link_to": "Library Member",
    "type": "DocType"
   },
   {
-   "label": "Library Member Type",
-   "link_to": "Library Member Type",
-   "type": "DocType"
-  },
-  {
-   "label": "New Library Member",
-   "link_to": "Library Member",
-   "type": "DocType",
-   "doc_view": "new"
-  },
-  {
-   "color": "#1a73e8",
+   "color": "#ea4335",
    "format": "{} Issues",
    "label": "Library Book Issue",
    "link_to": "Library Book Issue",
    "type": "DocType"
   },
   {
-   "label": "New Library Book Issue",
-   "link_to": "Library Book Issue",
-   "type": "DocType",
-   "doc_view": "new"
-  },
-  {
-   "label": "Overdue Books Report",
-   "link_to": "Overdue Books Report",
-   "type": "Report"
-  },
-  {
+   "color": "#fbbc04",
+   "format": "{} Fines",
    "label": "Library Fine",
    "link_to": "Library Fine",
    "type": "DocType"
   },
   {
-   "label": "Library Fine Payment",
-   "link_to": "Library Fine Payment",
-   "type": "DocType"
-  },
-  {
-   "label": "Library Fine Waiver",
-   "link_to": "Library Fine Waiver",
-   "type": "DocType"
-  },
-  {
+   "color": "#9334e6",
    "label": "Library Settings",
    "link_to": "Library Settings",
    "type": "DocType"
-  },
-  {
-   "label": "Fine Collection Report",
-   "link_to": "Fine Collection Report",
-   "type": "Report"
-  },
-  {
-   "label": "Member Activity Report",
-   "link_to": "Member Activity Report",
-   "type": "Report"
-  },
-  {
-   "label": "Book Utilization Report",
-   "link_to": "Book Utilization Report",
-   "type": "Report"
-  },
-  {
-   "label": "Outstanding Fines Summary",
-   "link_to": "Outstanding Fines Summary",
-   "type": "Report"
-  },
-  {
-   "label": "Library Dashboard",
-   "link_to": "Library Dashboard",
-   "type": "Dashboard"
   }
- ]
+ ],
+ "title": "Library Management"
 }
